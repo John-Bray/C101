@@ -22,6 +22,19 @@ createCommand("jb/sasl/iPads/toggle", "show_hide_iPads") -- jb/sasl/iPads/visibl
 createCommand("jb/sasl/yawDamper/toggle", "auto pedals ON/OFF")  -- jb_yawControl
 createCommand("jb/sasl/hud/toggle", "show hide FlightPathMarker") -- jb/sasl/Hud/hidden
 
+defineProperty(            "FD_mode",             globalPropertyi("sim/cockpit2/autopilot/flight_director_mode"))  -- 0 =off, 1 =FD, 2 = AP
+defineProperty(            "AP_Hdg_mode",  globalPropertyi("sim/cockpit2/autopilot/heading_mode"))  -- READ ONLY !!
+defineProperty(            "AP_Hdg_mag",  globalPropertyf("sim/cockpit/autopilot/heading_mag"))  -- MAG
+defineProperty(            "Hdg",  globalPropertyf("sim/flightmodel/position/mag_psi"))  -- MAG
+
+
+-- sim/cockpit2/autopilot/autothrottle_enabled	int	y	enum	Auto-throttle: 0=servos declutched (arm, hold), 1=airspeed hold, 2=N1 target hold, 3=retard, 4=reserved for future use
+-- sim/cockpit2/autopilot/heading_mode	int	n	enum	Autopilot heading mode.
+
+
+createCommand("jb/sasl/copilot/headingHold", "toggle heading assistance") -- 
+
+
 defineProperty("runTime",  globalPropertyf("sim/time/total_running_time_sec"))
 lastCommandClick = get(runTime)
 

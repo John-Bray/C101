@@ -94,10 +94,10 @@ P _gear/0/_latN 0.0
 P _gear/0/_latR 0.0
 P _gear/0/_leg_len 1.968503952
 P _gear/0/_lonE 1.0
-P _gear/0/_lonN 106.153068542
+P _gear/0/_lonN 120.363159180
 P _gear/0/_lonR 121.0
 P _gear/0/_scon 10377.005859375
-P _gear/0/_stat_def 0.429451734
+P _gear/0/_stat_def 0.429451674
 P _gear/0/_steerdeg_hispeed 10.0
 P _gear/0/_steerdeg_lospeed 60.0
 P _gear/0/_strut_comp 0.0
@@ -108,7 +108,7 @@ P _gear/0/_strut_t2 0.252929688
 P _gear/0/_tire_radius 0.623359561
 P _gear/0/_tire_swidth 0.295275599
 P _gear/1/_axiE 0.0
-P _gear/1/_axiN 7.010204792
+P _gear/1/_axiN 7.957543850
 P _gear/1/_axiR 8.0
 P _gear/1/_cyc_time 5.0
 P _gear/1/_damp 1201.548095703
@@ -124,14 +124,14 @@ P _gear/1/_gear_x -5.314960480
 P _gear/1/_gear_y -1.574803114
 P _gear/1/_gear_z 16.732282639
 P _gear/1/_latE 0.0
-P _gear/1/_latN 74.483428955
+P _gear/1/_latN 84.548904419
 P _gear/1/_latR 85.0
 P _gear/1/_leg_len 2.624671936
 P _gear/1/_lonE -5.0
-P _gear/1/_lonN -13.762756348
+P _gear/1/_lonN -14.946929932
 P _gear/1/_lonR -15.0
 P _gear/1/_scon 12015.480468750
-P _gear/1/_stat_def 0.328291833
+P _gear/1/_stat_def 0.328291923
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -142,7 +142,7 @@ P _gear/1/_strut_t2 0.252929688
 P _gear/1/_tire_radius 0.721784770
 P _gear/1/_tire_swidth 0.262467176
 P _gear/2/_axiE 0.0
-P _gear/2/_axiN -7.010204792
+P _gear/2/_axiN -7.957543850
 P _gear/2/_axiR -8.0
 P _gear/2/_cyc_time 5.0
 P _gear/2/_damp 1201.548095703
@@ -158,14 +158,14 @@ P _gear/2/_gear_x 5.314960480
 P _gear/2/_gear_y -1.574803114
 P _gear/2/_gear_z 16.732282639
 P _gear/2/_latE 0.0
-P _gear/2/_latN -74.483428955
+P _gear/2/_latN -84.548904419
 P _gear/2/_latR -85.0
 P _gear/2/_leg_len 2.624671936
 P _gear/2/_lonE -5.0
-P _gear/2/_lonN -13.762756348
+P _gear/2/_lonN -14.946929932
 P _gear/2/_lonR -15.0
 P _gear/2/_scon 12015.480468750
-P _gear/2/_stat_def 0.328291833
+P _gear/2/_stat_def 0.328291923
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -19510,7 +19510,7 @@ P _prop/0/_prop_type 9
 P _prop/0/_vectarmY_engn 0.0
 P _prop/0/_vectarmZ_engn 0.0
 P _prop/count 8
-P _sbrk/0/_ang_now -4.089187622
+P _sbrk/0/_ang_now -34.515022278
 P _sbrk/0/_area 5.440033913
 P _sbrk/0/_axi_rot 100.0
 P _sbrk/0/_ext_ang -45.0
@@ -22463,7 +22463,7 @@ P _wing/8/_inc_vect/7 0
 P _wing/8/_inc_vect/8 0
 P _wing/8/_inc_vect/9 0
 P _wing/8/_inc_vect/count 10
-P _wing/8/_incid_chrd_inc 5.500084877
+P _wing/8/_incid_chrd_inc 0.490579158
 P _wing/8/_incid_full_up 6.0
 P _wing/8/_incidence/0 4.0
 P _wing/8/_incidence/1 3.500000000
@@ -22823,7 +22823,7 @@ P _wing/9/_inc_vect/7 0
 P _wing/9/_inc_vect/8 0
 P _wing/9/_inc_vect/9 0
 P _wing/9/_inc_vect/count 10
-P _wing/9/_incid_chrd_inc 5.500084877
+P _wing/9/_incid_chrd_inc 0.490579158
 P _wing/9/_incid_full_up 6.0
 P _wing/9/_incidence/0 4.0
 P _wing/9/_incidence/1 3.500000000
@@ -25301,7 +25301,7 @@ P acf/_has_APU_generator 0
 P acf/_has_APU_switch 0
 P acf/_has_DC_fd 0
 P acf/_has_GLASS_hsi 0
-P acf/_has_SC_fd 0
+P acf/_has_SC_fd 1
 P acf/_has_TCAS 1
 P acf/_has_a_fuel_any 0
 P acf/_has_a_fuel_sel 0
@@ -25462,7 +25462,7 @@ P acf/_mixt_x_ctr 0.0
 P acf/_n1_power_curve1 2.0
 P acf/_n1_power_curve2 3.0
 P acf/_n2_power_curve 3.500000000
-P acf/_name C101-XP11 RC01
+P acf/_name C101-XP11 RC02
 P acf/_new_plot_XP3D_cock/0 0
 P acf/_new_plot_XP3D_cock/1 1
 P acf/_new_plot_XP3D_cock/2 0
@@ -25486,7 +25486,7 @@ P acf/_nom_bat_volt 24.0
 P acf/_nom_fuelP 30.0
 P acf/_nom_gen_volt 26.399999619
 P acf/_nom_oilP 115.0
-P acf/_notes 2019 Jul 05 vRC01
+P acf/_notes 2019 Jul 06 vRC02
 P acf/_num_batteries 2
 P acf/_num_braking_wheels 0.0
 P acf/_num_buses 2
@@ -25552,6 +25552,8 @@ P acf/_part_descrip/77 tfeLcaN elle
 P acf/_part_descrip/78 hgiRaN tllec
 P acf/_part_descrip/79 Prop3 gearbox
 P acf/_part_descrip/80 Prop4 gearbox
+P acf/_part_descrip/81 right is front
+P acf/_part_descrip/82 RR Lifter
 P acf/_part_descrip/85 Front Wheel Fairing
 P acf/_part_descrip/86 hgiReG tW raleehnaP 
 P acf/_part_descrip/87 Left Wheel Fairing
@@ -26306,5 +26308,21 @@ gen_rheostat gen_rheostat.png
   CLICK_DX 0
   CLICK_DY 0
   WRAP 0
+
+rad_GPS_430_2d Garmin_430_2d.png
+  POS 826.000000 109.500000
+  DATAREF 
+  SIZE 0.450000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+but_SC_fdir_mode but_SC_fdir_mode
+  POS 39.000000 577.000000
+  DATAREF 
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  BUS_SRC 1
 
 PANEL_3D_END

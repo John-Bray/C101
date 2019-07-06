@@ -2,6 +2,27 @@ size={256,110}
 
 function update()
 
+	headingHoldToggle = findCommand("jb/sasl/copilot/headingHold")  
+	function headingHoldToggle_handler(phase)	-- happens too fast !!!!!!!
+	local		 current_FD = get(FD_mode) -- 0 =off, 1 =FD, 2 = AP
+	local		headingSelectCommand = findCommand("sim/autopilot/heading")
+
+	
+		if 1 == phase and (get(runTime) - lastCommandClick ) > 0.5 then
+			commandOnce(headingSelectCommand)		
+			set(AP_Hdg_mag, get(Hdg))	
+			if current_FD < 2 then  -- set to current heading, enable heading hold and switch AP servos on if necessary
+				set(FD_mode, 2) 
+			else -- do we still need FD for autothrottle?
+				set(FD_mode, 0) 
+			end
+			lastCommandClick = get(runTime)
+		end
+	end
+	registerCommandHandler(headingHoldToggle, 0, headingHoldToggle_handler)	
+	
+	
+
 	iPadVis = findCommand("jb/sasl/iPads/toggle")    
 	function iPadVis_handler(phase)	-- happens too fast !!!!!!!
 		if 1 == phase and (get(runTime) - lastCommandClick ) > 0.5 then
@@ -44,6 +65,9 @@ function update()
 		end
 	end
 	registerCommandHandler(yawToggle, 0, yawToggle_handler)	--  CTRL Y 
+	
+	
+	
 	
 	
 	
