@@ -9,7 +9,10 @@ defineProperty("iPadVisibility",createGlobalPropertyi("jb/sasl/iPads/visible")) 
 set(iPadVisibility,  0) 
 
 defineProperty("HudHidden",createGlobalPropertyi("jb/sasl/Hud/hidden"))  -- 0=visible, 1= hidden (killed) (INT)
-set(HudHidden,  1) 
+set(HudHidden,  0) 
+
+defineProperty("airframeHidden",createGlobalPropertyi("jb/sasl/Airframe/hidden"))  -- 0=visible, 1= hidden (killed) (INT)
+set(airframeHidden,  0) 
 
 createProp("jb/sasl/currentWaypointID", "int", 0);
 defineProperty("currentWaypointID",   globalPropertyi("jb/sasl/currentWaypointID"))
@@ -21,6 +24,8 @@ set(cwpTest,  0)
 createCommand("jb/sasl/iPads/toggle", "show_hide_iPads") -- jb/sasl/iPads/visible
 createCommand("jb/sasl/yawDamper/toggle", "auto pedals ON/OFF")  -- jb_yawControl
 createCommand("jb/sasl/hud/toggle", "show hide FlightPathMarker") -- jb/sasl/Hud/hidden
+createCommand("jb/sasl/airframe/toggle", "show hide airframe") -- jb/sasl/Airframe/hidden
+
 
 defineProperty(            "FD_mode",             globalPropertyi("sim/cockpit2/autopilot/flight_director_mode"))  -- 0 =off, 1 =FD, 2 = AP
 defineProperty(            "AP_Hdg_mode",  globalPropertyi("sim/cockpit2/autopilot/heading_mode"))  -- READ ONLY !!
