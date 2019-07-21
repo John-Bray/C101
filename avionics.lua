@@ -9,7 +9,7 @@ defineProperty("iPadVisibility",createGlobalPropertyi("jb/sasl/iPads/visible")) 
 set(iPadVisibility,  0) 
 
 defineProperty("HudHidden",createGlobalPropertyi("jb/sasl/Hud/hidden"))  -- 0=visible, 1= hidden (killed) (INT)
-set(HudHidden,  0) 
+set(HudHidden,  1) 
 
 defineProperty("airframeHidden",createGlobalPropertyi("jb/sasl/Airframe/hidden"))  -- 0=visible, 1= hidden (killed) (INT)
 set(airframeHidden,  0) 
@@ -46,18 +46,23 @@ lastCommandClick = get(runTime)
 
 --Power
 defineProperty(                 "IAS",  globalPropertyf("sim/flightmodel/position/indicated_airspeed"))
-defineProperty("collectivePitch",  globalPropertyf("sim/flightmodel2/engines/prop_pitch_deg"))
-defineProperty(        "pitchMax",  globalPropertyf("sim/aircraft/prop/acf_max_pitch"))
-defineProperty(         "pitchMin",  globalPropertyf("sim/aircraft/prop/acf_min_pitch"))
+--defineProperty("collectivePitch",  globalPropertyf("sim/flightmodel2/engines/prop_pitch_deg"))
+--defineProperty(        "pitchMax",  globalPropertyf("sim/aircraft/prop/acf_max_pitch"))
+--defineProperty(         "pitchMin",  globalPropertyf("sim/aircraft/prop/acf_min_pitch"))
 defineProperty(           "throttle",  globalPropertyf("sim/cockpit2/engine/actuators/throttle_ratio_all"))
-defineProperty(            "engTq",  globalPropertyf("sim/flightmodel/engine/ENGN_TRQ"))
-defineProperty(        "engWatts",  globalPropertyf("sim/cockpit2/engine/indicators/power_watts"))
-createProp      ("jb/sasl/TqPercent", "int", 0);
-defineProperty("TqPercent",   globalPropertyi("jb/sasl/TqPercent"))
-set(TqPercent,  0)
+--defineProperty(            "engTq",  globalPropertyf("sim/flightmodel/engine/ENGN_TRQ"))
+--defineProperty(        "engWatts",  globalPropertyf("sim/cockpit2/engine/indicators/power_watts"))
+--createProp      ("jb/sasl/TqPercent", "int", 0);
+--defineProperty("TqPercent",   globalPropertyi("jb/sasl/TqPercent"))
+--set(TqPercent,  0)
 
--- Pitch
+-- Pitch (for altitude/pitch hold)
 defineProperty("pitchCyclic",  globalPropertyf("sim/joystick/yoke_pitch_ratio"))
+defineProperty("vsi",  globalPropertyf("sim/flightmodel/position/vh_ind_fpm"))
+defineProperty("alt_hold",  globalPropertyf("sim/cockpit2/autopilot/altitude_dial_ft"))          -- the altitude we want to hold
+defineProperty("altitude",  globalPropertyf("sim/cockpit2/gauges/indicators/altitude_ft_pilot")) -- the altiltude we are now
+
+
 
 -- Roll
 defineProperty("rollCyclic",  globalPropertyf("sim/joystick/yoke_roll_ratio"))
@@ -67,8 +72,8 @@ defineProperty("jb_yawControl",  createGlobalPropertyi("jb/sasl/afcs/yawControl"
 defineProperty(          "yawRate", globalPropertyf("sim/flightmodel/position/R"))
 defineProperty(        "yawForce",  globalPropertyf("sim/flightmodel/forces/N_total"))
 defineProperty(             "pedals",  globalPropertyf("sim/cockpit2/controls/yoke_heading_ratio"))
-defineProperty(          "TRPtitch",  globalPropertyf("sim/flightmodel2/engines/prop_pitch_deg[1]"))
-defineProperty(          "TR_rpm", globalPropertyf("sim/cockpit2/engine/indicators/prop_speed_rpm[1]"))
+--defineProperty(          "TRPtitch",  globalPropertyf("sim/flightmodel2/engines/prop_pitch_deg[1]"))
+--defineProperty(          "TR_rpm", globalPropertyf("sim/cockpit2/engine/indicators/prop_speed_rpm[1]"))
 
 --createProp("jb/sasl/hoverMode", "int", 0);
 --defineProperty("jb_hoverMode",   globalPropertyi("jb/sasl/hoverMode"))
@@ -121,8 +126,7 @@ defineProperty(           "currentLON", globalPropertyf("sim/flightmodel/positio
 defineProperty(           "currentBaro", globalPropertyf("sim/cockpit/misc/barometer_setting"))
 defineProperty(           "altitude_m", globalPropertyf("sim/flightmodel/position/elevation"))  -- in metres!
 
---defineProperty("alt_hold",  globalPropertyf("sim/cockpit2/autopilot/altitude_dial_ft"))          -- the altitude we want to hold
---defineProperty("altitude",  globalPropertyf("sim/cockpit2/gauges/indicators/altitude_ft_pilot")) -- the altiltude we are now
+
  
 font_Sans10=loadFont('custom avionics/MS_Sans10.fnt')  
 font_Sans12=loadFont('custom avionics/MS_Sans12.fnt')  
@@ -135,6 +139,7 @@ font_led_32=loadFont('custom avionics/JB_LED_7S_32.fnt')
 -- http://kvazars.com/littera/ 
 components = {
 
+	
 	Radios           {position={  256,     0, 440, 256} },
 	
 	commands     {position={      0,  256, 256, 110} },
@@ -143,6 +148,11 @@ components = {
 		    CWP       {position={  801,     26, 222, 88} }
 
 }
+	--iPad0             {position={      0,  416, 256, 192} },
+	--iPad1             {position={  256,  416, 256, 192} },
+	--iPad2             {position={  512,  416, 256, 192} },
+	--iPad3             {position={  756,  416, 256, 192} },
+
 
 set(panelLight1, 1)
 set(panelLight2, 1)
